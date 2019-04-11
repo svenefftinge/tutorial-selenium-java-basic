@@ -1,12 +1,12 @@
-image: selenium/standalone-chrome-debug
 ports:
   - port: 6080
     onOpen: open-preview
   - port: 5900
     onOpen: ignore
 tasks:
-- init: >
+- before: sdk use java 11.0.2-open
+  init: >
     mvn install
   command: >
-    cd phoenicis-javafx/ &&
+    gp open src/main/java/com/applitools/quickstarts/BasicDemo.java &&
     mvn exec:java

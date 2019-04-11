@@ -1,5 +1,4 @@
-image:
-  file: .gitpod.dockerfile
+image: selenium/standalone-chrome-debug
 ports:
   - port: 6080
     onOpen: open-preview
